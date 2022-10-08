@@ -30,7 +30,9 @@ class PersonalView: UIView {
         let button = UIButton(type: .system)
         button.setTitle("-", for: .normal)
         button.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        button.isEnabled = false
         button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
+        button.addTarget(self, action: #selector(minusButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -40,6 +42,7 @@ class PersonalView: UIView {
         button.setTitle("+", for: .normal)
         button.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
+        button.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -47,12 +50,14 @@ class PersonalView: UIView {
     let counterLabel: UILabel = {
         let label = UILabel()
         label.text = "0"
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = .black
         label.textAlignment = .center
         label.font = UIFont(name: "Avenir Next Bold", size: 48)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    var counter = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -73,6 +78,23 @@ class PersonalView: UIView {
         backView.addSubview(plusButton)
         backView.addSubview(counterLabel)
     }
+    
+    @objc func minusButtonTapped() {
+        
+        counter -= 1
+        counterLabel.text = "\(counter)"
+        
+        if counter == 0 {
+            minusButton.isEnabled = false
+        }
+    }
+    
+    @objc func plusButtonTapped() {
+        counter += 1
+        counterLabel.text = "\(counter)"
+        minusButton.isEnabled = true
+    }
+    
     
     func setConstrains() {
         NSLayoutConstraint.activate([

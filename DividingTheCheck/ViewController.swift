@@ -51,6 +51,7 @@ class ViewController: UIViewController {
     
     let totalMoneyView  = TotalMoneyView()
     let personsView = PersonalView()
+    let tipsView = TipsView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,18 +69,18 @@ class ViewController: UIViewController {
         view.addSubview(totalMoneyView)
         view.addSubview(personsView)
         view.addSubview(calculateButton)
+        view.addSubview(tipsView)
     }
-
 }
 
 extension ViewController{
     
     func setConstrains() {
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            logoImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
+            logoImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 40),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.65),
             logoImageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
@@ -98,7 +99,12 @@ extension ViewController{
             personsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             personsView.heightAnchor.constraint(equalToConstant: 105),
             
-            calculateButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            tipsView.topAnchor.constraint(equalTo: personsView.bottomAnchor, constant: 15),
+            tipsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            tipsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            tipsView.heightAnchor.constraint(equalToConstant: 105),
+            
+            calculateButton.bottomAnchor.constraint(equalTo: tipsView.bottomAnchor, constant: 90),
             calculateButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             calculateButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             calculateButton.heightAnchor.constraint(equalToConstant: 60),

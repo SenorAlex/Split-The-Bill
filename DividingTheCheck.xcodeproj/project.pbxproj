@@ -13,6 +13,8 @@
 		FA46EF2F28EF162100B60F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA46EF2E28EF162100B60F01 /* Assets.xcassets */; };
 		FA46EF3228EF162100B60F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA46EF3028EF162100B60F01 /* LaunchScreen.storyboard */; };
 		FA46EF3A28F05B9A00B60F01 /* TotalMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46EF3928F05B9A00B60F01 /* TotalMoneyView.swift */; };
+		FA70D10128F0DDB80003ABEE /* TipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70D10028F0DDB80003ABEE /* TipCollectionViewCell.swift */; };
+		FA70D10328F185290003ABEE /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70D10228F185290003ABEE /* TipsView.swift */; };
 		FA8F050528F06A71005FBD04 /* PersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F050428F06A71005FBD04 /* PersonsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		FA46EF3128EF162100B60F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA46EF3328EF162100B60F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA46EF3928F05B9A00B60F01 /* TotalMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMoneyView.swift; sourceTree = "<group>"; };
+		FA70D10028F0DDB80003ABEE /* TipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA70D10228F185290003ABEE /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		FA8F050428F06A71005FBD04 /* PersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +64,8 @@
 			children = (
 				FA46EF2528EF161E00B60F01 /* AppDelegate.swift */,
 				FA46EF2728EF161E00B60F01 /* SceneDelegate.swift */,
+				FA70D10028F0DDB80003ABEE /* TipCollectionViewCell.swift */,
+				FA70D10228F185290003ABEE /* TipsView.swift */,
 				FA46EF2928EF161E00B60F01 /* ViewController.swift */,
 				FA46EF3928F05B9A00B60F01 /* TotalMoneyView.swift */,
 				FA8F050428F06A71005FBD04 /* PersonsView.swift */,
@@ -142,7 +148,9 @@
 			files = (
 				FA46EF2A28EF161E00B60F01 /* ViewController.swift in Sources */,
 				FA8F050528F06A71005FBD04 /* PersonsView.swift in Sources */,
+				FA70D10128F0DDB80003ABEE /* TipCollectionViewCell.swift in Sources */,
 				FA46EF2628EF161E00B60F01 /* AppDelegate.swift in Sources */,
+				FA70D10328F185290003ABEE /* TipsView.swift in Sources */,
 				FA46EF3A28F05B9A00B60F01 /* TotalMoneyView.swift in Sources */,
 				FA46EF2828EF161E00B60F01 /* SceneDelegate.swift in Sources */,
 			);
