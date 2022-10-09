@@ -22,7 +22,7 @@ class TotalMoneyView: UIView {
         let textField = UITextField()
         textField.backgroundColor = #colorLiteral(red: 0.8451052133, green: 1, blue: 0.9562667274, alpha: 1)
         textField.layer.cornerRadius = 10
-        textField.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        textField.textColor = .black
         textField.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         textField.font = UIFont(name: "Avenir Next Bold", size: 48)
         textField.textAlignment = .center
